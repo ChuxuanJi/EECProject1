@@ -33,14 +33,53 @@ git clone https://github.com/ChuxuanJi/EECProject1.git/
 
 ### Code:
 
-- **1.sample.prepare.r:** Filter the OTU table and evvironmental factors and merge them together.
+- **shan_box_alpha.R:** An R script to draw a box plot of Shannon Index at different temperatures.
+
+- **PCA_test_Unifrac.r:** An R script to draw a PCA graph using the calculated weighted Unifrac distances.
+
+- **sample_prepare_lati.R:** An R script that filters the OTU table and combines the filtered results with the latitude grouping table.
+
+- **sample_prepare_shan.R:** An R script that filters the OTU table and combines the filtered results with the Shannon Index grouping table.
+
+- **sample_prepare_T.r:** An R script that filters the OTU table and combines the filtered results with the temperature grouping table.
+
+- **sample_prepare_waterns_lati.R:** An R script that filters the OTU table and combines the filtered results with the water (non-saline) samples grouping table classified by latitude.
+
+- **sample_prepare_ns_shan.R:** An R script that filters the OTU table and combines the filtered results with the non-saline samples grouping table classified by Shannon Index.
+
+- **sample_prepare_ns_T.R:** An R script that filters the OTU table and combines the filtered results with the non-saline samples grouping table classified by temperature.
+
+- **sample_prepare_s_shan.R:** An R script that filters the OTU table and combines the filtered results with the saline samples grouping table classified by Shannon Index.
+
+- **sample_prepare_s_T.R:** An R script that filters the OTU table and combines the filtered results with the saline samples grouping table classified by temperature.
 
 
 <br/>
 
 ### Data: 
+- **emp_90_gg_1k_weighted_unifrac.txt.pc.first_ten.txt**: Calculation results of the weighted Unifrac distance for the top ten species in abundance. 
 
-- 
+- **group_empo.txt**: Different classification results according to the types of sample collection sites. 
+
+- **group_lati_10.txt**: Classification results of samples with OTUs numbers greater than 10 classified by latitude. 
+
+- **group_T_10.txt**: Classification results of samples with OTUs numbers greater than 10 classified by temperature. 
+
+- **group_lati_waterns.txt**: Classification results of samples of water (non-saline) classified by latitude. 
+
+- **group_shan.txt**: Classification results of samples classified by Shannon Index. 
+
+- **group_ns_shan.txt**: Classification results of non-saline samples classified by Shannon Index. 
+
+- **group_ns_T.txt**: Classification results of non-saline samples classified by temperature. 
+
+- **group_s_shan.txt**: Classification results of saline samples classified by Shannon Index.
+
+- **group_s_T.txt**: Classification results of saline samples classified by temperature. 
+
+-
+
+
 ## Author name and contact
 
 Name: Chuxuan Ji

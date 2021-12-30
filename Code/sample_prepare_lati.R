@@ -32,6 +32,6 @@ df2<-df1[colnames(otu4)[-1],]
 df2<-df2%>% select(-altitude_m)
 write.table(cbind(sample=rownames(df1),df1),'env.txt',row.names = F,sep = '\t',quote = F)
 #分组
-mygroup<-read.delim('/rds/general/user/cj421/home/group_shan.txt',header = T)
+mygroup<-read.delim('/rds/general/user/cj421/home/group_lati_10.txt',header = T)
 mygroup<-mygroup[mygroup$ID %in% colnames(otu4),]
-write.table(mygroup,'group1_1_shan.txt',row.names = F,sep = '\t',quote = F)
+write.table(mygroup,'group1_1_10_lati.txt',row.names = F,sep = '\t',quote = F)

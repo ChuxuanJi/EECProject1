@@ -14,46 +14,46 @@ install.packages("ggplot2",repos="http://cran.us.r-project.org")
 library(ggplot2)
 install.packages("ggrepel",repos="http://cran.us.r-project.org")
 library(ggrepel)
-install.packages("ggsci",repos="http://cran.us.r-project.org")
+options(stringsAsFactors=F)
 library(ggsci)
 options(stringsAsFactors=F)
 #读取文件
-genus_10 <- read.delim('filter_otu_10.txt',header = T, row.names = 1,check.names = F)
-genus_10 <- na.omit(genus_10)
-genus_10 <- as.data.frame(t(genus_10))
+genus_1 <- read.delim('filter_otu_1.txt',header = T, row.names = 1,check.names = F)
+genus_1 <- na.omit(genus_1)
+genus_1 <- as.data.frame(t(genus_1))
 env <- read.delim('env.txt',row.names = 1,header = T)
 #计算出Bray-Curtis距离之后进行nmds分析
-dist_10 <- vegdist(genus_10, method="bray",na.rm = T)
-dist_10 <- as.matrix(dist_10)
-nmds_result_10 <-  metaMDS(dist_10,k=2)
-stress <- paste0("Stress=",round(nmds_result_10$stress,3))
+dist_1 <- vegdist(genus_1, method="bray",na.rm = T)
+dist_1 <- as.matrix(dist_1)
+nmds_result_1 <-  metaMDS(dist_1,k=2)
+stress <- paste0("Stress=",round(nmds_result_1$stress,3))
 
-nmds12_10 <- as.data.frame(nmds_result_10$points)
+nmds12_1 <- as.data.frame(nmds_result_1$points)
 
-env<-env[rownames(nmds12_10),]
-fit<-envfit(nmds_result_10,env,permutations = 999,na.rm = TRUE)
+env<-env[rownames(nmds12_1),]
+fit<-envfit(nmds_result_1,env,permutations = 999,na.rm = TRUE)
 
 summary(fit)
 fit
 sink('envfit1.txt',append=FALSE)
-envfit(nmds_result_10,env,permutations = 999,na.rm = TRUE)
+envfit(nmds_result_1,env,permutations = 999,na.rm = TRUE)
 sink(file=NULL)
 fit1<-as.data.frame(fit$vectors$arrows)
-nmds12_10$samples<-rownames(nmds12_10)
-groups_10_shan<-read.delim('group1_10_shan.txt',header = T)
-colnames(groups_10_shan)[1]<-'samples'
+nmds12_1$samples<-rownames(nmds12_1)
+groups_1_shan<-read.delim('group1_1_s_shan.txt',header = T)
+colnames(groups_1_shan)[1]<-'samples'
 
 
 
 
 
-nmds12_10<-merge(nmds12_10,groups_10_shan,by='samples')
+nmds12_1<-merge(nmds12_1,groups_1_shan,by='samples')
 
 fit1<-fit1/5
 mycol<-c('#8DD3C7','#FFFFB3','#BEBADA','#FB8072','#80B1D3','#FDB462','#B3DE69','#FCCDE5')
 ggplot() +
   #geom_text_repel(data = st,aes(RDA1,RDA2,label=row.names(st)),size=4)+#Show a Square
-  geom_point(data = nmds12_10,aes(MDS1,MDS2,color=as.factor(group)),size=4)+
+  geom_point(data = nmds12_1,aes(MDS1,MDS2,color=group),size=4)+
   #scale_color_manual(values=rep())+
   geom_segment(data = fit1,aes(x = 0, y = 0, xend = NMDS1, yend = NMDS2), 
                arrow = arrow(angle=22.5,length = unit(0.35,"cm"),
@@ -66,7 +66,7 @@ ggplot() +
   labs(x='NMDS1',y="NMDS2",title = stress)+
   theme_bw()+theme(panel.grid=element_blank())
 
-ggsave('nmds_envfit_10_shan.pdf',width = 8,height = 6)
+ggsave('nmds_envfit_1_s_shan.pdf',width = 8,height = 6)
 
 
 
@@ -74,12 +74,12 @@ ggsave('nmds_envfit_10_shan.pdf',width = 8,height = 6)
 
 ggplot() +
   #geom_text_repel(data = st,aes(RDA1,RDA2,label=row.names(st)),size=4)+#Show a Square
-  geom_point(data = nmds12_10,aes(MDS1,MDS2,color=as.factor(group)),size=4)+
-  stat_ellipse(data = nmds12_10,aes(MDS1,MDS2,color=as.factor(group)), level = 0.95)+
+  geom_point(data = nmds12_1,aes(MDS1,MDS2,color=group),size=4)+
+  stat_ellipse(data = nmds12_1,aes(MDS1,MDS2,color=group), level = 0.95)+
   scale_color_npg()+
   geom_hline(yintercept=0,linetype=2) + 
   geom_vline(xintercept=0,linetype=2)+
   labs(x='NMDS1',y="NMDS2",title = stress)+
   theme_bw()+theme(panel.grid=element_blank())
 
-ggsave('nmds_without_envfit_10_shan.pdf',width = 8,height = 6)
+ggsave('nmds_without_envfit_1_s_shan.pdf',width = 8,height = 6)
