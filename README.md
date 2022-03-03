@@ -1,8 +1,8 @@
-# Analysis and comparison of the diversity of global bacterial and fungal communities
+# Changes in microbial diversity along environmental gradients
 
 ## Description
 
-This directory contains R scripts and programs for **"Analysis and comparison of the divesity of global bacterial and fungal communities"**, Chuxuan Ji's 1st project of EEC MRes.
+This directory contains R scripts and programs for **"Changes in microbial diversity along environmental gradients"**, Chuxuan Ji's winter project of EEC MRes.
 
 ## Languages
 
@@ -10,10 +10,10 @@ R, Bash
 
 ## Dependencies
 
-For some scripts in this directory, packages [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html), [vegan](https://cran.r-project.org/web/packages/vegan/index.html), [ggpubr](https://cran.r-project.org/web/packages/ggpubr/index.html), [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html), [data.table](https://cran.r-project.org/web/packages/data.table/index.html),[maptools](https://cran.r-project.org/web/packages/maptools/index.html), [ggrepel](https://cran.r-project.org/web/packages/ggrepel/index.html), [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/index.html) are required. 
+For some scripts in this directory, packages [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html), [vegan](https://cran.r-project.org/web/packages/vegan/index.html), [ggpubr](https://cran.r-project.org/web/packages/ggpubr/index.html), [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html), [data.table](https://cran.r-project.org/web/packages/data.table/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html), [ggrepel](https://cran.r-project.org/web/packages/ggrepel/index.html), [RColorBrewer](https://cran.r-project.org/web/packages/RColorBrewer/index.html), [lme4](https://cran.r-project.org/web/packages/lme4/index.html), [MASS](https://cran.r-project.org/web/packages/MASS/index.html), [randomForest](https://cran.r-project.org/web/packages/randomForest/index.html), [rfPermute](https://cran.r-project.org/web/packages/rfPermute/index.html), [A3](https://cran.r-project.org/web/packages/A3/index.html), [car](https://cran.r-project.org/web/packages/car/index.html), [rockchalk](https://cran.r-project.org/web/packages/rockchalk/index.html) are required. 
 Please run the following script in **R/RStudio** for package installation: 
 ```R
-install.packages(c("ggplot2", "vegan", "ggpubr", "dplyr", "data.table", "maptools", "ggrepel", "RColorBrewer"))
+install.packages(c("ggplot2", "vegan", "ggpubr", "dplyr", "data.table", "maptools", "ggrepel", "RColorBrewer", "lme4", "MASS", "randomForest", "rfPermute", "A3", "car", "rockchalk"))
 ```
 
 
@@ -33,67 +33,41 @@ git clone https://github.com/ChuxuanJi/EECProject1.git/
 
 ### Code:
 
-- **shan_box_alpha.R:** An R script to draw a box plot of Shannon Index at different temperatures.
+- **Diversity_EVs_Pairplot.R:** An R script to judge whether this is a significant linear relationship between diversity indices and environmental variables.
 
-- **PCA_test_Unifrac.r:** An R script to draw a PCA graph using the calculated weighted Unifrac distances.
+- **Diversty_Hist_EMPO2.R:** An R script to plot histograms of diversity indices for the whole dataset samples and the EMPO 2 samples.
 
-- **sample_prepare_empo2.R:** An R script that filters the OTU table and combines the filtered results with the samples grouping table classified by different sampling sites.
+- **Diversty_Hist_EMPO3.R:** An R script to plot histograms of diversity indices for the EMPO 3 samples.
 
-- **sample_prepare_lati.R:** An R script that filters the OTU table and combines the filtered results with the latitude grouping table.
+- **Diversty_lati_EMPO2.R:** An R script to show the patterns between diversity indices and latitude of the whole dataset samples and the EMPO 2 samples.
 
-- **sample_prepare_shan.R:** An R script that filters the OTU table and combines the filtered results with the Shannon Index grouping table.
+- **Diversty_lati_EMPO3.R:** An R script to show the patterns between diversity indices and latitude of the EMPO 3 samples.
 
-- **sample_prepare_T.r:** An R script that filters the OTU table and combines the filtered results with the temperature grouping table.
+- **Diversty_LM_all.R:** An R script for linear models between diversity indices and environmental variables of the whole dataset samples.
 
-- **sample_prepare_waterns_lati.R:** An R script that filters the OTU table and combines the filtered results with the water (non-saline) samples grouping table classified by latitude.
+- **Diversty_LM_EMPO3.R:** An R script for linear models between diversity indices and environmental variables of three EMPO 3 samples.
 
-- **sample_prepare_ns_lati.R:** An R script that filters the OTU table and combines the filtered results with the non-saline samples grouping table classified by latitude.
+- **Diversty_LM_local.R:** An R script for linear models between diversity indices and environmental variables of three local dataset samples.
 
-- **sample_prepare_ns_shan.R:** An R script that filters the OTU table and combines the filtered results with the non-saline samples grouping table classified by Shannon Index.
+- **Diversty_LM_PM_1EV.R:** An R script to plot the relationship between diversity indices and a single environmental variable.
 
-- **sample_prepare_ns_T.R:** An R script that filters the OTU table and combines the filtered results with the non-saline samples grouping table classified by temperature.
+- **Diversty_LM_PM_2EVs_3D.R:** An R script to plot the relationship between diversity indices and two environmental variables.
 
-- **sample_prepare_s_lati.R:** An R script that filters the OTU table and combines the filtered results with the saline samples grouping table classified by latitude.
+- **Diversty_pH_EMPO2.R:** An R script to show the patterns between diversity indices and pH of the whole dataset samples and the EMPO 2 samples.
 
-- **sample_prepare_s_shan.R:** An R script that filters the OTU table and combines the filtered results with the saline samples grouping table classified by Shannon Index.
+- **Diversty_PM_all.R:** An R script for polynomial regression models between diversity indices and environmental variables of the whole dataset samples.
 
-- **sample_prepare_s_T.R:** An R script that filters the OTU table and combines the filtered results with the saline samples grouping table classified by temperature.
+- **Diversty_PM_EMPO3.R:** An R script for polynomial regression models between diversity indices and environmental variables of three EMPO 3 samples.
 
-- **sample_prepare_p_lati.R:** An R script that filters the OTU table and combines the filtered results with the plant samples grouping table classified by latitude.
+- **Diversty_PM_local.R:** An R script for polynomial regression models between diversity indices and environmental variables of three local dataset samples.
 
-- **sample_prepare_p_shan.R:** An R script that filters the OTU table and combines the filtered results with the plant samples grouping table classified by Shannon Index.
+- **Diversty_PM_all.R:** An R script for random forest models between diversity indices and environmental variables of the whole dataset samples.
 
-- **sample_prepare_p_T.R:** An R script that filters the OTU table and combines the filtered results with the plant samples grouping table classified by temperature.
+- **Diversty_PM_EMPO3.R:** An R script for random forest models between diversity indices and environmental variables of three EMPO 3 samples.
 
-- **sample_prepare_a_lati.R:** An R script that filters the OTU table and combines the filtered results with the animal samples grouping table classified by latitude.
+- **Diversty_PM_local.R:** An R script for random forest models between diversity indices and environmental variables of three local dataset samples.
 
-- **nmds_envfit_empo2.R:** An R script for NMDS analysis and graphing of the filtered OTU table classified by different sampling sites.
-
-- **nmds_envfit_lati.R:** An R script for NMDS analysis and graphing of the filtered OTU table classified by latitude.
-
-- **nmds_envfit_T.R:** An R script for NMDS analysis and graphing of the filtered OTU table classified by temperatue.
-
-- **nmds_envfit_shan.R:** An R script for NMDS analysis and graphing of the filtered OTU table classified by Shannon Index.
-
-- **nmds_envfit_ns_lati.R:** An R script for NMDS analysis and graphing of the filtered OTU table of non-saline samples classified by latitude.
-
-- **nmds_envfit_ns_T.R:** An R script for NMDS analysis and graphing of the filtered OTU table of non-saline samples classified by temperatue.
-
-- **nmds_envfit_ns_shan.R:** An R script for NMDS analysis and graphing of the filtered OTU table of non-saline samples classified by Shannon Index.
-
-- **nmds_envfit_s_lati.R:** An R script for NMDS analysis and graphing of the filtered OTU table of saline samples classified by latitude.
-
-- **nmds_envfit_s_T.R:** An R script for NMDS analysis and graphing of the filtered OTU table of saline samples classified by temperatue.
-
-- **nmds_envfit_s_shan.R:** An R script for NMDS analysis and graphing of the filtered OTU table of saline samples classified by Shannon Index.
-
-- **nmds_envfit_p_lati.R:** An R script for NMDS analysis and graphing of the filtered OTU table of plant samples classified by latitude.
-
-- **nmds_envfit_p_T.R:** An R script for NMDS analysis and graphing of the filtered OTU table of plant samples classified by temperatue.
-
-- **nmds_envfit_a_lati.R:** An R script for NMDS analysis and graphing of the filtered OTU table of animal samples classified by latitude.
-
-- **nmds_envfit_waterns_lati.R:** An R script for NMDS analysis and graphing of the filtered OTU table of Water (non-saline) samples classified by latitude.
+- **Diversty_T_EMPO2.R:** An R script to show the patterns between diversity indices and temperature of the whole dataset samples and the EMPO 2 samples.
 
 
 <br/>
