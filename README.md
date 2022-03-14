@@ -69,48 +69,62 @@ git clone https://github.com/ChuxuanJi/EECProject1.git/
 
 - **Diversty_T_EMPO2.R:** An R script to show the patterns between diversity indices and temperature of the whole dataset samples and the EMPO 2 samples.
 
+- **PM_PD_all.R:** An R script for polynomial regression models between phylogenetic diversity and environmental variables of the whole dataset samples.
+
+- **RF_PD_all.R:** An R script for random forest models between phylogenetic diversity and environmental variables of the whole dataset samples.
+
 
 <br/>
 
 ### Data: 
-- **emp_90_gg_1k_weighted_unifrac.txt.pc.first_ten.txt**: Calculation results of the weighted Unifrac distance for the top ten species in abundance. 
+- **Chao_lati_all.txt**: Classification results of samples classified by Chao1 richness and latitude. 
 
-- **env.txt**: The filtered environmental data includes latitude, longtitude, depth, altitude, temperature and pH factors. 
+- **Chao_lati_ani.txt**: Classification results of animal samples classified by Chao1 richness and latitude. 
 
-- **envfit1.txt**: Data used to generate arrows for environmental influence factors. 
+- **Chao_lati_ns.txt**: Classification results of non-saline samples classified by Chao1 richness and latitude. 
 
-- **group_empo.txt**: Different classification results according to the types of sample collection sites. 
+- **Chao_lati_p.txt**: Classification results of samples classified by Chao1 richness and latitude. 
 
-- **group_empo2.txt**: Different classification results according to the types of bigger sample collection sites. 
+- **Chao_lati_s.txt**: Classification results of saline samples classified by Chao1 richness and latitude. 
 
-- **group_lati_10.txt**: Classification results of samples with OTUs numbers greater than 10 classified by latitude. 
+- **Chao_T_empo2.txt**: Classification results of EMPO 2 samples classified by Chao1 richness and temperature. 
 
-- **group_T_10.txt**: Classification results of samples with OTUs numbers greater than 10 classified by temperature. 
+- **OO_lati_all.txt**: Classification results of samples classified by absolute richness (observed OTUs) and latitude. 
 
-- **group_lati_waterns.txt**: Classification results of samples of water (non-saline) classified by latitude. 
+- **OO_lati_ani.txt**: Classification results of animal samples classified by absolute richness (observed OTUs) and latitude. 
 
-- **group_shan.txt**: Classification results of samples classified by Shannon Index. 
+- **OO_lati_ns.txt**: Classification results of non-saline samples classified by absolute richness (observed OTUs) and latitude. 
 
-- **group_ns_lati.txt**: Classification results of non-saline samples classified by latitude. 
+- **OO_lati_p.txt**: Classification results of plant samples classified by absolute richness (observed OTUs) and latitude. 
 
-- **group_ns_shan.txt**: Classification results of non-saline samples classified by Shannon Index. 
+- **OO_lati_s.txt**: Classification results of saline samples classified by absolute richness (observed OTUs) and latitude. 
 
-- **group_ns_T.txt**: Classification results of non-saline samples classified by temperature. 
+- **OO_T_empo2.txt**: Classification results of EMPO 2 samples classified by absolute richness (observed OTUs) and temperature. 
 
-- **group_s_lati.txt**: Classification results of saline samples classified by latitude. 
+- **Shan_lati_all.txt**: Classification results of samples classified by Shannon diversity and latitude. 
 
-- **group_s_shan.txt**: Classification results of saline samples classified by Shannon Index.
+- **Shan_lati_ani.txt**: Classification results of animal samples classified by Shannon diversity and latitude. 
 
-- **group_s_T.txt**: Classification results of saline samples classified by temperature. 
+- **Shan_lati_ns.txt**: Classification results of non-saline samples classified by Shannon diversity and latitude. 
 
-- **group_p_lati.txt**: Classification results of plant samples classified by latitude. 
+- **Shan_lati_p.txt**: Classification results of plant samples classified by Shannon diversity and latitude. 
 
-- **group_p_shan.txt**: Classification results of plant samples classified by Shannon Index.
+- **Shan_lati_s.txt**: Classification results of saline samples classified by Shannon diversity and latitude. 
 
-- **group_p_T.txt**: Classification results of plant samples classified by temperature. 
+- **Shan_T_empo2.txt**: Classification results of EMPO 2 samples classified by Shannon diversity and temperature. 
 
-- **group_a_lati.txt**: Classification results of animals samples classified by latitude. 
+- **Func_Chao_T_pH_lati.csv**: A filtered data set containing Chao1 richness, temperature, pH and latitude. 
 
+- **Func_OO_T_pH_lati.csv**: A filtered data set containing Chao1 richness, temperature, pH and latitude. 
+
+- **Func_Shan_T_pH_lati.csv**: A filtered data set containing Chao1 richness, temperature, pH and latitude. 
+
+
+<br/>
+
+
+### Results: 
+- **LM_PM_RF_r2.xlsx**: Results of linear, polynomial regression and random forest model fits at global scale, EMPO3 environment and local scale. 
 
 ## Author name and contact
 
