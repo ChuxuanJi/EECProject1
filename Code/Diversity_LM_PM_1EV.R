@@ -241,7 +241,7 @@ pm_Shan_all_T_plot <- ggplot() +
               fill = "grey", alpha = 0.5)+
   geom_line(data = pred_pm_Shanfunc_all_T, mapping = aes(x = new_T, y = fit), 
             color = "#CB4042", size = 1, alpha = 0.5) +
-  labs(x = 'Temperature (°C)', y = "Shannon Index", title = 'Polynomial Regression Model')+
+  labs(x = 'Temperature (°C)', y = "Shannon Index", title = )+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(legend.position="none")+
   theme_bw()
@@ -260,7 +260,7 @@ pm_Shan_all_p_plot <- ggplot() +
               fill = "grey", alpha = 0.5)+
   geom_line(data = pred_pm_Shanfunc_all_p, mapping = aes(x = new_p, y = fit), 
             color = "#3A8FB7", size = 1, alpha = 0.5) +
-  labs(x = 'pH', y = "Shannon Index", title = 'Polynomial Regression Model')+
+  labs(x = 'pH', y = "Shannon Index")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(legend.position="none")+
   theme_bw()
@@ -279,7 +279,7 @@ pm_Shan_all_L_plot <- ggplot() +
               fill = "grey", alpha = 0.5)+
   geom_line(data = pred_pm_Shanfunc_all_L, mapping = aes(x = new_L, y = fit), 
             color = "#FFB11B", size = 1, alpha = 0.5) +
-  labs(x = 'Latitude', y = "Shannon Index", title = 'Polynomial Regression Model')+
+  labs(x = 'Latitude', y = "Shannon Index")+
   theme(plot.title = element_text(hjust = 0.5))+
   theme(legend.position="none")+
   theme_bw()
@@ -288,4 +288,8 @@ pm_Shan_all_L_plot
 
 ggarrange(lm_Shan_all_T_plot, lm_Shan_all_p_plot,lm_Shan_all_L_plot,pm_Shan_all_T_plot, pm_Shan_all_p_plot,pm_Shan_all_L_plot,ncol = 3, nrow = 2,
           labels = c("A","B","C","D","E","F"), # 添加标签
+          font.label = list(size = 14))
+
+ggarrange(pm_Shan_all_T_plot, pm_Shan_all_p_plot,pm_Shan_all_L_plot,ncol = 3, nrow = 1,
+          labels = c("A","B","C"), # 添加标签
           font.label = list(size = 14))
