@@ -35,44 +35,41 @@ git clone https://github.com/ChuxuanJi/EECProject1.git/
 
 - **Diversity_EVs_Pairplot.R:** An R script to judge whether this is a significant linear relationship between diversity indices and environmental variables.
 
-- **Diversty_Hist_EMPO2.R:** An R script to plot histograms of diversity indices for the whole dataset samples and the EMPO 2 samples.
+- **Diversty_Hist_EMPO2.R:** An R script to plot histograms of diversity indices for the filtered data set samples and the EMPO 2 samples.
 
 - **Diversty_Hist_EMPO3.R:** An R script to plot histograms of diversity indices for the EMPO 3 samples.
 
-- **Diversty_lati_EMPO2.R:** An R script to show the patterns between diversity indices and latitude of the whole dataset samples and the EMPO 2 samples.
+- **Diversty_lati_EMPO2.R:** An R script to show the patterns between diversity indices and latitude of the filtered data set samples and the EMPO 2 samples.
 
 - **Diversty_lati_EMPO3.R:** An R script to show the patterns between diversity indices and latitude of the EMPO 3 samples.
 
-- **Diversty_LM_all.R:** An R script for linear models between diversity indices and environmental variables of the whole dataset samples.
+- **Diversty_LM_all.R:** An R script for linear models between diversity indices and environmental variables of the filtered data set.
 
 - **Diversty_LM_EMPO3.R:** An R script for linear models between diversity indices and environmental variables of three EMPO 3 samples.
 
-- **Diversty_LM_local.R:** An R script for linear models between diversity indices and environmental variables of three local dataset samples.
+- **Diversty_LM_local.R:** An R script for linear models between diversity indices and environmental variables of three local data sets.
 
 - **Diversty_LM_PM_1EV.R:** An R script to plot the relationship between diversity indices and a single environmental variable.
 
 - **Diversty_LM_PM_2EVs_3D.R:** An R script to plot the relationship between diversity indices and two environmental variables.
 
-- **Diversty_pH_EMPO2.R:** An R script to show the patterns between diversity indices and pH of the whole dataset samples and the EMPO 2 samples.
+- **Diversty_pH_EMPO2.R:** An R script to show the patterns between diversity indices and pH of the filtered data set samples and the EMPO 2 samples.
 
-- **Diversty_PM_all.R:** An R script for polynomial regression models between diversity indices and environmental variables of the whole dataset samples.
+- **Diversty_PM_all.R:** An R script for polynomial regression models between diversity indices and environmental variables of the filtered data set.
 
 - **Diversty_PM_EMPO3.R:** An R script for polynomial regression models between diversity indices and environmental variables of three EMPO 3 samples.
 
-- **Diversty_PM_local.R:** An R script for polynomial regression models between diversity indices and environmental variables of three local dataset samples.
+- **Diversty_PM_local.R:** An R script for polynomial regression models between diversity indices and environmental variables of three local data sets.
 
-- **Diversty_PM_all.R:** An R script for random forest models between diversity indices and environmental variables of the whole dataset samples.
+- **Diversty_PM_all.R:** An R script for random forest models between diversity indices and environmental variables of the whole data set samples.
 
 - **Diversty_PM_EMPO3.R:** An R script for random forest models between diversity indices and environmental variables of three EMPO 3 samples.
 
-- **Diversty_PM_local.R:** An R script for random forest models between diversity indices and environmental variables of three local dataset samples.
+- **Diversty_PM_local.R:** An R script for random forest models between diversity indices and environmental variables of three local data sets.
 
-- **Diversty_T_EMPO2.R:** An R script to show the patterns between diversity indices and temperature of the whole dataset samples and the EMPO 2 samples.
+- **Diversty_T_EMPO2.R:** An R script to show the patterns between diversity indices and temperature of the whole data set samples and the EMPO 2 samples.
 
-- **PM_PD_all.R:** An R script for polynomial regression models between phylogenetic diversity and environmental variables of the whole dataset samples.
-
-- **RF_PD_all.R:** An R script for random forest models between phylogenetic diversity and environmental variables of the whole dataset samples.
-
+- **NMDS.R:** An R script for non-metric multidimensional scalinge analysis of the filtered data set.
 
 <br/>
 
